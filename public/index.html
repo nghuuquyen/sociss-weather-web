@@ -7,6 +7,7 @@
 </head>
 <body>
   <div class="wrapper">
+    <!-- header -->
     <header id="header">
       <div class="branch-logo">
         <b>Sociss Weather</b>
@@ -18,18 +19,34 @@
         <a href="/contact">Contact</a>
       </nav>
     </header>
+    <!-- ./ header -->
 
     <main class="page-content">
       <h1>Click and see weather in Viet Nam</h1>
       <hr/>
       <div class="map-box">
-        <img src="/images/vietnam-map.jpg" alt="Viet Nam Map" />
-      </div>
-    </div>
+        <!-- map image-->
+        <div class="map-image">
+          <img id="map" src="/images/vietnam-map.jpg" alt="VietNamMap" usemap="VietNamMap" />
+          <map name="VietNamMap">
+            <area shape="rect" alt="" title="" coords="538,611,603,634" onclick="showWeather(event);" />
+          </map>
 
+          <div class="imgmap_css_container">
+            <a style="top: 603px; left: 504px;" title="Da Nang">
+              <img src="/images/location-icon.png" width="20" height="20" />
+            </a>
+          </div>
+        </div>
+        <!-- ./ map image -->
+      </div>
+    </main>
+
+    <!-- footer -->
     <footer id="footer">
-      Author Nguyễn Hữu Quyền, @Sociss 2017
+      2017
     </footer>
+    <!-- ./ footer -->
   </div>
 </body>
 <script src="/js/app.js" charset="utf-8"></script>
