@@ -15,7 +15,7 @@ app.use('/api/weather', function(req, res) {
   logger.info(`Called API for get weather city ${cityName}`);
 
   weather.getCityWeather(cityName).then(data => {
-    res.writeHead(200, { 'Content-type' : 'text/html' });
+    res.writeHead(200, { 'Content-type' : 'application/json' });
     res.write(data);
     res.end();
   });

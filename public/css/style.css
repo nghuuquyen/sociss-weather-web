@@ -81,6 +81,10 @@ body {
 
 .map-box .imgmap_css_container a {
   position: absolute;
+}
+
+.move-up-effect {
+  position: absolute;
   -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
   animation-name: example;
@@ -102,4 +106,57 @@ body {
   25%  {padding-top: 2px;}
   50%  {padding-top: 4px;}
   100% {padding-top: 6px;}
+}
+
+
+
+/*
+* Component: Weather card
+*/
+
+.weather-card {
+  z-index: 1000;
+  width: 300px;
+  height: 200px;
+  display: none;
+  background-color: #3D6AA2;
+  position: absolute;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.weather-card .card-body {
+  padding: 10px;
+}
+
+.weather-card .card-footer {
+  margin-top: 6px;
+  background-color: #e6e6e6;
+  height: 35px;
+  text-align: center;
+  padding: 5px;
+}
+
+.weather-card .close-button {
+  background-color: #17c4da;
+  width: 50%;
+  height: 90%;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.weather-card .close-button:hover {
+  background-color: #19e1fb;
+}
+
+.weather-card #cityName {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.weather-card #temp {
+  font-size: 35px;
+  font-weight: 600;
 }

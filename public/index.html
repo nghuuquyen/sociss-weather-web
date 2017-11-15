@@ -6,6 +6,25 @@
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
+  <div id="WeatherCard" class="weather-card">
+
+    <div class="card-body">
+      <p>
+        <b>Thành phố </b> <span id="cityName">Da Nang</span>
+      </p>
+      <p>
+        <span id="temp">20</span> <sup>°</sup> C - Độ Ẩm <span id="humidity">82%</span>
+      </p>
+      Tốc độ gió <span id="wind">45</span> Km/h
+    </div>
+
+    <div class="card-footer">
+      <button class="close-button" type="button"
+      onclick="closePopup('WeatherCard')">
+      Close </button>
+    </div>
+  </div>
+
   <div class="wrapper">
     <!-- header -->
     <header id="header">
@@ -14,54 +33,52 @@
       </div>
 
       <nav>
-        <a href="/" class="active">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/" class="active">Trang chủ</a>
+        <a href="/contact">Liên hệ</a>
       </nav>
     </header>
     <!-- ./ header -->
 
     <main class="page-content">
-      <h1>Click and see weather in Viet Nam</h1>
+      <h1>
+        Nhấp và xem thời tiết tại Việt Nam
+        <img class="move-up-effect" src="/images/location-icon.png" width="30" height="30" />
+      </h1>
       <hr/>
       <div class="map-box">
         <!-- map image-->
         <div class="map-image">
           <img id="map" src="/images/vietnam-map.jpg" alt="VietNamMap" usemap="VietNamMap" />
-          <div class="imgmap_css_container">
-            <a style="top: 603px; left: 504px;" title="Da Nang">
-              <img src="/images/location-icon.png" width="20" height="20" />
-            </a>
-          </div>
+
           <map id="map-areas" name="VietNamMap">
-            <area shape="rect" alt="da nang" title="da nang" coords="538,611,603,634" />
-            <area shape="rect" alt="thua thien hue" title="" coords="475,586,532,620"  />
-            <area shape="rect" alt="quang tri" title="" coords="427,553,489,581"  />
-            <area shape="rect" alt="quang binh" title="" coords="360,471,480,543"  />
-            <area shape="rect" alt="ha tinh" title="" coords="302,427,431,468"  />
-            <area shape="rect" alt="nghe an" title="" coords="216,330,355,382"  />
-            <area shape="rect" alt="vinh" title="" coords="306,391,375,418"  />
-            <area shape="rect" alt="thanh hoa" title="" coords="285,302,388,323"  />
-            <area shape="rect" alt="ninh binh" title="" coords="314,271,392,289"  />
-            <area shape="rect" alt="nam dinh" title="" coords="379,259,453,279"  />
-            <area shape="rect" alt="ha noi" title="" coords="329,204,374,218"  />
-            <area shape="rect" alt="son la " title="" coords="182,181,252,220"  />
-            <area shape="rect" alt="yen bai" title="" coords="233,140,300,168"  />
-            <area shape="rect" alt="dien bien" title="" coords="103,137,180,164"  />
-            <area shape="rect" alt="quang nam" title="" coords="497,639,595,676"  />
-            <area shape="rect" alt="quang ngai" title="" coords="588,690,656,727"  />
-            <area shape="rect" alt="kon tum" title="" coords="518,740,571,766"  />
-            <area shape="rect" alt="gia lai" title="" coords="529,807,597,824"  />
-            <area shape="rect" alt="binh dinh" title="" coords="602,760,659,789"  />
-            <area shape="rect" alt="quy nhon" title="" coords="625,801,703,818"  />
-            <area shape="rect" alt="phu yen" title="" coords="613,827,652,862"  />
-            <area shape="rect" alt="tuy hoa" title="" coords="638,864,684,885"  />
-            <area shape="rect" alt="dac lak" title="" coords="522,862,585,881"  />
-            <area shape="rect" alt="lam dong" title="" coords="513,974,582,997"  />
-            <area shape="rect" alt="khanh hoa" title="" coords="611,898,666,924"  />
-            <area shape="rect" alt="ho chinh minh" title="" coords="426,1054,482,1080"  />
-            <area shape="rect" alt="binh thuan" title="" coords="515,1016,592,1038"  />
-            <area shape="rect" alt="nha trang" title="" coords="629,935,702,954"  />
+            <area shape="rect" alt="Đà Nẵng" title="da nang" coords="538,611,603,634" />
+            <area shape="rect" alt="Thừa Thiên Huế" title="" coords="475,586,532,620"  />
+            <area shape="rect" alt="Quảng Trị" title="" coords="427,553,489,581"  />
+            <area shape="rect" alt="Quảng Bình" title="" coords="360,471,480,543"  />
+            <area shape="rect" alt="Hà Tĩnh" title="" coords="302,427,431,468"  />
+            <area shape="rect" alt="Nghệ An" title="" coords="216,330,355,382"  />
+            <area shape="rect" alt="Vinh" title="" coords="306,391,375,418"  />
+            <area shape="rect" alt="Thanh Hóa" title="" coords="285,302,388,323"  />
+            <area shape="rect" alt="Ninh Bình" title="" coords="314,271,392,289"  />
+            <area shape="rect" alt="Nam Định" title="" coords="379,259,453,279"  />
+            <area shape="rect" alt="Hà Nội" title="" coords="329,204,374,218"  />
+            <area shape="rect" alt="Sơn La" title="" coords="182,181,252,220"  />
+            <area shape="rect" alt="Yên Bái" title="" coords="233,140,300,168"  />
+            <area shape="rect" alt="Điện Biên" title="" coords="103,137,180,164"  />
+            <area shape="rect" alt="Quảng Nam" title="" coords="497,639,595,676"  />
+            <area shape="rect" alt="Quảng Ngãi" title="" coords="588,690,656,727"  />
+            <area shape="rect" alt="Kon Tum" title="" coords="518,740,571,766"  />
+            <area shape="rect" alt="Gia Lai" title="" coords="529,807,597,824"  />
+            <area shape="rect" alt="Bình Định" title="" coords="602,760,659,789"  />
+            <area shape="rect" alt="Quy Nhơn" title="" coords="625,801,703,818"  />
+            <area shape="rect" alt="Phú Yên" title="" coords="613,827,652,862"  />
+            <area shape="rect" alt="Tuy Hòa" title="" coords="638,864,684,885"  />
+            <area shape="rect" alt="Đắk Lắk" title="" coords="522,862,585,881"  />
+            <area shape="rect" alt="Lâm Đồng" title="" coords="513,974,582,997"  />
+            <area shape="rect" alt="Khánh Hòa" title="" coords="611,898,666,924"  />
+            <area shape="rect" alt="Hồ Chí Minh" title="" coords="426,1054,482,1080"  />
+            <area shape="rect" alt="Bình Thuận" title="" coords="515,1016,592,1038"  />
+            <area shape="rect" alt="Nha Trang" title="" coords="629,935,702,954"  />
           </map>
         </div>
         <!-- ./ map image -->
@@ -70,10 +87,11 @@
 
     <!-- footer -->
     <footer id="footer">
-      2017
+      Gsmart Team, 2017
     </footer>
     <!-- ./ footer -->
   </div>
 </body>
-<script src="/js/app.js" charset="utf-8"></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/app.js"></script>
 </html>
