@@ -1,0 +1,76 @@
+/*
+* Layout
+*/
+body {
+  margin: 0;
+}
+
+.wrapper {
+  background-color: #EEE;
+  margin: 0;
+}
+
+.page-content {
+  width: 90%;
+  background-color: #FAFAFA;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/*
+* Component: header
+*/
+
+#header .branch-logo {
+  background-color: #03A9F4;
+  height: 50px;
+  color: #FFF;
+}
+
+#header .branch-logo b {
+  font-size: 40px;
+  padding-left: 15px;
+}
+
+#header nav {
+  background-color: #cecece;
+  height: 35px;
+  padding: 3px;
+}
+
+#header nav a {
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  display: inline-block;
+}
+
+#header nav a.active {
+  background: #9ca1dc;
+  border-radius: 15px;
+  padding: 7px;
+}
+
+/*
+* Component: footer
+*/
+
+#footer {
+  background-color: darkgrey;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*
+* Component: map-box
+*/
+.map-box img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+}
